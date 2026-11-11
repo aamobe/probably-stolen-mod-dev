@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/dragonpan2/probably-stolen-modding",
+  "commit": "ae161038c6cfed6725f66cfbc5d6b05406975068",
+  "checked_date": "2026-11-11",
+  "provenance": "2026-11-11 从固定提交 raw URL 获取四份官方资料；SHA256 标识下载字节。",
+  "files": [
+    {
+      "path": "APIChanges.zh-CN.md",
+      "sha256": "80160BBD84CF0A0C790A30D8933EA9743015822598444027D3238223423CB301"
+    },
+    {
+      "path": "CodeOfConduct.zh-CN.md",
+      "sha256": "BDD0FF5360EC05EB490D26FBC08952A54C684F281CBEAE9E2FC7D1007A7D1E60"
+    },
+    {
+      "path": "ModdingGuide.zh-CN.md",
+      "sha256": "18380AF4D2422E5BD814F2F2C509DDC5E2A99EAD110F3264E311A162ABDA7AC7"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256": "6CACF1970042EED2FDAD5DD93C55FA3D38F0C7B2C8FD2497642DAFE6431D01B7"
+    }
+  ]
+}

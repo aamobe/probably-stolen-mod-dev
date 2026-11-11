@@ -1,0 +1,119 @@
+{
+  "document": "docs/接口开发卡.md",
+  "reviewed_commit": "ae161038c6cfed6725f66cfbc5d6b05406975068",
+  "reviewed_date": "2026-11-11",
+  "dependencies": [
+    {
+      "section": "模组资源",
+      "reviewed_sha256": "F8C419D39A137E10B4032A53428D80762D85C1A62163F6250F71E6B79DF7E8EE",
+      "cards": [
+        "物品与资源"
+      ]
+    },
+    {
+      "section": "钩子点",
+      "reviewed_sha256": "18E3611327D99510BC77AE2CC6B3AA54E9708D9369A60D36D56F8E2C7147BF6F",
+      "cards": [
+        "物品与资源"
+      ]
+    },
+    {
+      "section": "保存模组数据",
+      "reviewed_sha256": "7C21277A19059E38EBCFFC6CB360169FFA3B42B61E961A004ED4CF2D9C16CC4B",
+      "cards": [
+        "存档与配置"
+      ]
+    },
+    {
+      "section": "自定义 UI",
+      "reviewed_sha256": "CA158A0122782750CA1DE3747034D1F63F135369B5E1C7A5469AD4AA4329A732",
+      "cards": [
+        "普通 UI 与机器 UI"
+      ]
+    },
+    {
+      "section": "机器窗口",
+      "reviewed_sha256": "6B53C639468622D290C1A3515DF1A7486C9CAFD7252DF5C862C86BD5E4D29A08",
+      "cards": [
+        "普通 UI 与机器 UI"
+      ]
+    },
+    {
+      "section": "人脉升级",
+      "reviewed_sha256": "40FE0E9EB4346AFD8E7364D6FCF9A355B58B66EEFBF933F1639F10ACEEB22CB7",
+      "cards": [
+        "人脉升级"
+      ]
+    },
+    {
+      "section": "起始方案",
+      "reviewed_sha256": "36ACE195BA69F1BF0E32246711A9DAB45C1C55821841F5B049201BFF5E7E8775",
+      "cards": [
+        "开局方案、天赋与难度"
+      ]
+    },
+    {
+      "section": "起始天赋",
+      "reviewed_sha256": "450A608C80902C44667D9AA44C83ED5E82C27C56FDD3C77D27010E0912B1D3D9",
+      "cards": [
+        "开局方案、天赋与难度"
+      ]
+    },
+    {
+      "section": "难度",
+      "reviewed_sha256": "245E921B29A8C0A9FF0E5960A9E9FBFF03167EFD253A7F084673A9167E51145E",
+      "cards": [
+        "开局方案、天赋与难度"
+      ]
+    },
+    {
+      "section": "夜间地点",
+      "reviewed_sha256": "4C97A5A56345E2E997AE832B9DE099AA9C9BF49D3A3023CC9D1AA78D39D2DD8A",
+      "cards": [
+        "夜间地点与事件"
+      ]
+    },
+    {
+      "section": "鉴定物品",
+      "reviewed_sha256": "33D35B2E9533922B5DA8CDDA90727ED0D46045F1AB493DE12F48A8531E7E777E",
+      "cards": [
+        "鉴定物品"
+      ]
+    },
+    {
+      "section": "模组配置",
+      "reviewed_sha256": "6F337ACDEDD52D67829A02900AE617120D24A9DB55176718D0897784BE6F546A",
+      "cards": [
+        "存档与配置"
+      ]
+    },
+    {
+      "section": "能力声明与扫描器",
+      "reviewed_sha256": "57178421B757DC23B66982D8D041543F40236A29D06568E76A12C609041B6005",
+      "cards": [
+        "发布前接口检查"
+      ]
+    },
+    {
+      "section": "Harmony 补丁",
+      "reviewed_sha256": "159AC992E3F543BF5385627DDC7D225E3ACD56A93818B8B92E7FA8C49A52B76C",
+      "cards": [
+        "发布前接口检查"
+      ]
+    },
+    {
+      "section": "依赖另一个模组",
+      "reviewed_sha256": "2CF5BE6CD1EE99C122D908A74B855B40A165C02F20E468F2E5E6D4D059DE2DE2",
+      "cards": [
+        "跨 Mod 与后台工作"
+      ]
+    },
+    {
+      "section": "后台工作",
+      "reviewed_sha256": "96548A8BC540B919D4E4347E9EBBD8D470AEBCDC030CC3D63B1D939066689383",
+      "cards": [
+        "跨 Mod 与后台工作"
+      ]
+    }
+  ]
+}

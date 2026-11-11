@@ -1,0 +1,7 @@
+# Official content is downloaded locally, not republished under this repo license.
+/docs/官方资料/*.md
+/docs/官方接口/*.md
+!/docs/官方接口/目录.md
+*.tmp
+/bin/
+/obj/
