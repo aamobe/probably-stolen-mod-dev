@@ -110,7 +110,7 @@ rules:          # 硬规则。不读方案也不能违反。
     - 发布包不带测试代码；不同时加载同一 Mod ID 的两份
     - 保留上一版发布包，能退回
   project:
-    - 默认官方 ModHook / ModHelper；官方接口不覆盖时才评估 Harmony。补丁只影响本 Mod 的 ID 或对象
+    - 尽量沿用原版路径。优先通过官方 ModHook / ModHelper 接入，复用原版的注册、创建、交付、存档与恢复流程。官方扩展点无法满足需求时，沿原版调用链选择最小的 Harmony 补丁，只影响本 Mod 的 ID 或对象
     - Init/OnEnable 在主菜单执行；资源用 OnModAssetsLoaded 并过滤 ID；局内数据从 OnGameLoadedInit 起读取
     - manifest.xml 必须列出 Assemblies 和 Capabilities；不打包游戏或前置 Mod 的 DLL
     - 官方 create-mod.bat 默认编译后部署；采用前先检查并改成显式授权部署，不能把构建当只读检查

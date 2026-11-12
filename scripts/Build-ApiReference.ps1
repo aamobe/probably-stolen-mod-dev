@@ -59,10 +59,34 @@ foreach ($section in $sections) {
     }
 }
 $outputs['目录.md'] = $index -join "`n"
-$rows = @('# 官方接口符号索引', '', '从官方正文和示例中提取的明确成员引用；不是程序集导出的完整 API，也不推断参数、返回类型或省略前缀的方法。按名称查到章节后阅读参数示例与限制。', '', '| 成员 | 出现章节 |', '| --- | --- |')
+$rows = @('# 官方接口符号索引', '', '官方示例引用来自固定快照。另列本机程序集核对的读档事件和新版测试分支接口。按名称定位后，再核对目标版本的参数、重载和限制。', '', '## 官方示例引用', '', '| 成员 | 出现章节 |', '| --- | --- |')
 foreach ($symbol in ($symbols.Keys | Sort-Object)) {
     $links = @($symbols[$symbol] | ForEach-Object { $title = $_ -replace '^\d+-|\.md$',''; '[' + $title + '](https://github.com/dragonpan2/probably-stolen-modding/blob/' + $sha + '/ModdingGuide.zh-CN.md#' + (Slug $title) + ')' })
     $rows += '| `' + $symbol + '` | ' + ($links -join '、') + ' |'
+}
+# Keep reviewed version data in the quick reference and index its qualified names here.
+$quick = [IO.File]::ReadAllText((Join-Path $root 'docs/接口速查.md'))
+$reviewedSections = @(
+    @{ Heading = '读档事件签名'; Label = '100-Rev13 本机程序集'; MemberColumn = 1; SignatureColumn = 2 },
+    @{ Heading = '1.0.0.14 测试分支新增接口'; Label = '1.0.0.14 测试分支官方文档'; MemberColumn = 2 }
+)
+foreach ($reviewed in $reviewedSections) {
+    $heading = [regex]::Escape($reviewed.Heading)
+    $section = [regex]::Match($quick, "(?ms)^#{2,3} ${heading}\r?\n(.*?)(?=^#{2,3} |\z)")
+    $members = @{}
+    foreach ($line in ($section.Groups[1].Value -split '\r?\n')) {
+        if (-not $line.StartsWith('|')) { continue }
+        $columns = $line.Split('|')
+        $signature = if ($reviewed.SignatureColumn) { $columns[$reviewed.SignatureColumn].Trim() } else { '见官方说明' }
+        foreach ($match in [regex]::Matches($columns[$reviewed.MemberColumn], '`((?:ModHelper|ModHook)\.[A-Za-z_][A-Za-z0-9_]*)`')) {
+            $members[$match.Groups[1].Value] = $signature
+        }
+    }
+    if ($members.Count -eq 0) { throw "速查小节缺少接口成员：$($reviewed.Heading)" }
+    $rows += '', "## $($reviewed.Label)", '', '| 成员 | 委托或签名 | 依据 |', '| --- | --- | --- |'
+    foreach ($member in ($members.Keys | Sort-Object)) {
+        $rows += '| `' + $member + '` | ' + $members[$member] + ' | [' + $reviewed.Heading + '](接口速查.md#' + (Slug $reviewed.Heading) + ') |'
+    }
 }
 $symbolText = $rows -join "`n"
 New-Item -ItemType Directory -Path $target -Force | Out-Null
