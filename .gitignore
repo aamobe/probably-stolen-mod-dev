@@ -5,3 +5,5 @@
 *.tmp
 /bin/
 /obj/
+/framework/**/bin/
+/framework/**/obj/

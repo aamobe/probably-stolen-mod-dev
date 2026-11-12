@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod>
+  <ID>ProbablyStolenModTemplate</ID>
+  <Name>Probably Stolen Mod Template</Name>
+  <Author>Template</Author>
+  <ModVersion>0.1.0</ModVersion>
+  <Description>Development scaffold for an official Probably Stolen mod.</Description>
+  <GameVersions />
+  <Prerequisites />
+  <Assemblies>
+    <Assembly>ProbablyStolenModTemplate.dll</Assembly>
+  </Assemblies>
+  <Capabilities />
+</Mod>
